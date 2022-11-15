@@ -1,0 +1,74 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lab 402/Desktop/FinalProject/simulation/modelsim
+Epll
+Z1 w1631572327
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/PLL.vhd
+Z6 FC:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/PLL.vhd
+l0
+L9
+VEEEMoVdW75k<j[a`U^NTX1
+!s100 GM<eV4F]_U_S@A_614IfB0
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1637264454
+!i10b 1
+Z9 !s108 1637264454.000000
+Z10 !s90 -reportprogress|300|-93|-work|PLL|C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/PLL.vhd|
+Z11 !s107 C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/PLL.vhd|
+!i113 1
+Z12 o-93 -work PLL
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 3 pll 0 22 EEEMoVdW75k<j[a`U^NTX1
+l27
+L17
+V7bDYGH?Y688cKcSfgI^mY0
+!s100 0WC<?THSBDFPAl]MciceI1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vPLL_pll_0
+!s110 1637264452
+!i10b 1
+!s100 H7SC?3ULB[aWg`Agf]<jV3
+IdDKCIjB@j0eQkmFAM=Q=b2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+R1
+8C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/submodules/PLL_pll_0.v
+FC:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/submodules/PLL_pll_0.v
+L0 2
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1637264452.000000
+!s107 C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/submodules/PLL_pll_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|PLL|+incdir+C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/submodules|C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/submodules/PLL_pll_0.v|
+!i113 1
+o-vlog01compat -work PLL
+!s92 -vlog01compat -work PLL {+incdir+C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/submodules}
+tCvgOpt 0
+n@p@l@l_pll_0

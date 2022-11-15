@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="d9df6e2f0fa2b63697b0"/>
+  </project>
+  <file_info>
+    <file device="5CSEMA5F31C6" path="ECE417Lab2.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="PLL:C" name="C">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME PLL HAS_SOPCINFO 1 GENERATION_ID 1631572325"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

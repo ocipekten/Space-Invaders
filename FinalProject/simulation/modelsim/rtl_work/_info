@@ -1,0 +1,158 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lab 402/Desktop/FinalProject/simulation/modelsim
+Elfsr
+Z1 w1637264153
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/Lab 402/Desktop/FinalProject/LFSR.vhd
+Z6 FC:/Users/Lab 402/Desktop/FinalProject/LFSR.vhd
+l0
+L7
+V7?Jf8hm=QSdhbkHoYQRgV2
+!s100 mSh5h=jY5N]HA5^c<Ro5Z0
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1637264454
+!i10b 1
+Z9 !s108 1637264454.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lab 402/Desktop/FinalProject/LFSR.vhd|
+Z11 !s107 C:/Users/Lab 402/Desktop/FinalProject/LFSR.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Amain
+R2
+R3
+R4
+DEx4 work 4 lfsr 0 22 7?Jf8hm=QSdhbkHoYQRgV2
+l18
+L15
+VT;No^SlTGz7[WFMVaVH_90
+!s100 _zAIndcg[d;e==?PK9k@c3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Pmy
+R2
+R3
+R4
+Z14 w1631570968
+R0
+Z15 8C:/Users/Lab 402/Desktop/FinalProject/subR.vhd
+Z16 FC:/Users/Lab 402/Desktop/FinalProject/subR.vhd
+l0
+L5
+V9>bCcPP5`biVHJ@F_7jYL0
+!s100 ;GS4NTF1OfY^R>ZLC`k212
+R7
+31
+b1
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lab 402/Desktop/FinalProject/subR.vhd|
+Z18 !s107 C:/Users/Lab 402/Desktop/FinalProject/subR.vhd|
+!i113 1
+R12
+R13
+Bbody
+Z19 DPx4 work 2 my 0 22 9>bCcPP5`biVHJ@F_7jYL0
+R2
+R3
+R4
+l0
+L9
+V<TP=TSae>BOFQ7m;Ol6Ld3
+!s100 0`USEmZecLn]c;HQL5DmZ0
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Esync
+w1637264300
+R19
+DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+R2
+R3
+R4
+R0
+8C:/Users/Lab 402/Desktop/FinalProject/sync.vhd
+FC:/Users/Lab 402/Desktop/FinalProject/sync.vhd
+l0
+L7
+VFUJ0UVaCbnmO<g`;9IGA52
+!s100 XX^2?:Y@9Z]o4PREZD4?:2
+R7
+31
+R8
+!i10b 1
+R9
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Lab 402/Desktop/FinalProject/sync.vhd|
+!s107 C:/Users/Lab 402/Desktop/FinalProject/sync.vhd|
+!i113 1
+R12
+R13
+Evga
+Z20 w1632176181
+R2
+R3
+R4
+R0
+Z21 8C:/Users/Lab 402/Desktop/FinalProject/vga.vhd
+Z22 FC:/Users/Lab 402/Desktop/FinalProject/vga.vhd
+l0
+L6
+V03O;oAM4gXTB4gSaHDY3[0
+!s100 QLm1lzhZASc;Mm7nXYko61
+R7
+31
+R8
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lab 402/Desktop/FinalProject/vga.vhd|
+Z24 !s107 C:/Users/Lab 402/Desktop/FinalProject/vga.vhd|
+!i113 1
+R12
+R13
+Amain
+R2
+R3
+R4
+DEx4 work 3 vga 0 22 03O;oAM4gXTB4gSaHDY3[0
+l44
+L19
+VS=CF5CQ0[eI4MmPOLP_WR0
+!s100 M[4H8BAe:HPL=C2KTbIR>0
+R7
+31
+R8
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13

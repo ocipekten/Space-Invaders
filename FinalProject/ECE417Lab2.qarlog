@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	C:/Users/Lab 402/Desktop/FinalProject/ECE417Lab2.qarlog
+
+Archive:	C:/Users/Lab 402/Desktop/FinalProject/ECE417Lab2.qar
+Date:		Thu Dec 09 19:12:57 2021
+Quartus Prime		16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Lab 402/Desktop/FinalProject/Chain2.cdf
+C:/Users/Lab 402/Desktop/FinalProject/ECE417Lab2.qpf
+C:/Users/Lab 402/Desktop/FinalProject/ECE417Lab2.qsf
+C:/Users/Lab 402/Desktop/FinalProject/LFSR.vhd
+C:/Users/Lab 402/Desktop/FinalProject/PLL.qsys
+C:/Users/Lab 402/Desktop/FinalProject/PLL.sopcinfo
+C:/Users/Lab 402/Desktop/FinalProject/PLL/PLL.cmp
+C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/PLL.debuginfo
+C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/PLL.qip
+C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/PLL.vhd
+C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/submodules/PLL_pll_0.qip
+C:/Users/Lab 402/Desktop/FinalProject/PLL/synthesis/submodules/PLL_pll_0.v
+C:/Users/Lab 402/Desktop/FinalProject/output_files/Chain1.cdf
+C:/Users/Lab 402/Desktop/FinalProject/output_files/Chain2.cdf
+C:/Users/Lab 402/Desktop/FinalProject/output_files/Chain3.cdf
+C:/Users/Lab 402/Desktop/FinalProject/output_files/Chain4.cdf
+C:/Users/Lab 402/Desktop/FinalProject/output_files/Chain5.cdf
+C:/Users/Lab 402/Desktop/FinalProject/output_files/Chain6.cdf
+C:/Users/Lab 402/Desktop/FinalProject/output_files/controller.vhd
+C:/Users/Lab 402/Desktop/FinalProject/output_files/shoot.vhd
+C:/Users/Lab 402/Desktop/FinalProject/subR.vhd
+C:/Users/Lab 402/Desktop/FinalProject/sync.vhd
+C:/Users/Lab 402/Desktop/FinalProject/vga.vhd
+c:/intelfpga_lite/16.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

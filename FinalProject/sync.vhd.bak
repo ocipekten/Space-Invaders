@@ -1,0 +1,220 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real;
+use work.my.all;
+
+ENTITY SYNC IS
+PORT(
+CLK: IN STD_LOGIC;
+HSYNC: OUT STD_LOGIC;
+VSYNC: OUT STD_LOGIC;
+SW1: IN STD_LOGIC;
+SW2: IN STD_LOGIC;
+SW3: IN STD_LOGIC;
+R: OUT STD_LOGIC_VECTOR(7 downto 0);
+G: OUT STD_LOGIC_VECTOR(7 downto 0);
+B: OUT STD_LOGIC_VECTOR(7 downto 0)
+
+);
+END SYNC;
+
+
+ARCHITECTURE MAIN OF SYNC IS
+SIGNAL RGB: STD_LOGIC_VECTOR(3 downto 0);
+SIGNAL square1_x_axis,square1_y_axis: INTEGER RANGE 0 TO 1688:=0;
+SIGNAL square2_x_axis,square2_y_axis: INTEGER RANGE 0 TO 1688:=0;
+SIGNAL HPOS: INTEGER RANGE 0 TO 1688:=0;
+SIGNAL VPOS: INTEGER RANGE 0 TO 1066:=0;
+BEGIN
+square(HPOS,VPOS,square1_x_axis,square1_y_axis,RGB);
+square(HPOS,VPOS,square2_x_axis,square2_y_axis,RGB);
+ PROCESS(CLK)
+	variable enemyOneSize : integer := 50;
+	variable squareOnePosX1 : integer := 716;
+	variable squareOnePosX2 : integer := squareOnePosX1 + enemyOneSize;
+	variable squareOnePosY1 : integer := 43;
+	variable squareOnePosY2 : integer := squareOnePosY1 + enemyOneSize;
+	variable squareTwoPosX1 : integer := 608;
+	variable squareTwoPosX2 : integer := 808;
+	variable squareTwoPosY1 : integer := 824;
+	variable squareTwoPosY2 : integer := 854;
+	variable ballPosX1 : integer := 634;
+	variable ballPosX2 : integer := 654;
+	variable ballPosY1 : integer := 423;
+	variable ballPosY2 : integer := 443;
+	variable ballVelocityX : integer := -1;
+	variable ballVelocityY : integer := 1;
+	variable ballFlag : integer := 1;
+	variable clockCounter : integer := 0;
+ BEGIN
+IF(CLK'EVENT AND CLK='1')THEN
+	R<=(others=>'0');
+	G<=(others=>'0');
+	B<=(others=>'0');
+	
+	--Frame control code
+	
+	if (HPOS < 1688) then
+		HPOS <= HPOS + 1;
+	else
+		HPOS <= 0;
+		if (VPOS <= 1066) then
+			VPOS <= VPOS + 1;
+		else
+		VPOS <= 0;
+		end if;
+	end if;
+	
+	--Porch control code
+	
+	if (HPOS > 0 and HPOS < 408) or (VPOS > 0 and VPOS < 42) then
+		R<=(others=>'0');
+		G<=(others=>'0');
+		B<=(others=>'0');
+	end if;
+	
+	--Synch control code
+	
+	if (HPOS > 48 and HPOS < 160) then
+		HSYNC <= '0';
+	else
+		HSYNC <= '1';
+	end if;
+	
+	if (VPOS > 1 and VPOS < 4) then -- check this again
+		VSYNC <= '0';
+	else
+		VSYNC <= '1';
+	end if;
+	
+	-- Clock Counter
+	
+	if (HPOS > 48 and HPOS < 160 and VPOS > 1 and VPOS < 4) then
+		clockCounter := clockCounter + 1;
+	end if;
+	
+	-- Enemy Signal
+	
+	if (SW3 = '1') then
+		if (HPOS > squareOnePosX1 and HPOS < squareOnePosX2 and VPOS > squareOnePosY1 and VPOS < squareOnePosY2) then
+			R<=(others=>'0');
+			G<=(others=>'0');
+			B<=(others=>'1');
+		end if;
+	else
+		if (HPOS > squareOnePosX1 and HPOS < squareOnePosX2 and VPOS > squareOnePosY1 and VPOS < squareOnePosY2) then
+			R<=(others=>'1');
+			G<=(others=>'1');
+			B<=(others=>'0');
+		end if;
+	end if;
+	
+	--Enemy Movement
+	
+	
+	--Square 1 signal control
+	
+--	if (SW3 = '1') then
+--		if (HPOS > squareOnePosX1 and HPOS < squareOnePosX2 and VPOS > squareOnePosY1 and VPOS < squareOnePosY2) then
+--			R<=(others=>'0');
+--			G<=(others=>'0');
+--			B<=(others=>'1');
+--		end if;
+--	else
+--		if (HPOS > squareOnePosX1 and HPOS < squareOnePosX2 and VPOS > squareOnePosY1 and VPOS < squareOnePosY2) then
+--			R<=(others=>'1');
+--			G<=(others=>'1');
+--			B<=(others=>'0');
+--		end if;
+--	end if;
+--	
+--	--Square 2 signal control
+--	if (SW3 = '1') then
+--		if (HPOS > squareTwoPosX1 and HPOS < squareTwoPosX2 and VPOS > squareTwoPosY1 and VPOS < squareTwoPosY2) then
+--			R<=(others=>'1');
+--			G<=(others=>'1');
+--			B<=(others=>'0');
+--		end if;
+--	else 
+--		if (HPOS > squareTwoPosX1 and HPOS < squareTwoPosX2 and VPOS > squareTwoPosY1 and VPOS < squareTwoPosY2) then
+--			R<=(others=>'1');
+--			G<=(others=>'0');
+--			B<=(others=>'0');
+--		end if;
+--	end if;
+--	
+--	--Ball signal control
+--	if (HPOS > ballPosX1 and HPOS < ballPosX2 and VPOS > ballPosY1 and VPOS < ballPosY2) then
+--			R<=(others=>'1');
+--			G<=(others=>'1');
+--			B<=(others=>'1');
+--	end if;
+--	
+--	if (ballPosX1 < 408 or ballPosX2 > 1688) then
+--			ballVelocityX := ballVelocityX * (-1);
+--	end if;
+--	
+--	if ((ballPosY1 = squareOnePosY2 and ballPosX1 > squareOnePosX1 and ballPosX2 < squareOnePosX2) or (ballPosY2 = squareTwoPosY1 and ballPosX1 > squareTwoPosX1 and ballPosX2 < squareTwoPosX2)) then
+--			ballVelocityX := ballVelocityX * (ballFlag);
+--			ballVelocityY := ballVelocityY * (-1);
+--			ballFlag := ballFlag * (-1);
+--	end if;
+--	
+--	--Square movement control
+--	if (HPOS > 48 and HPOS < 160 and VPOS > 1 and VPOS < 4) then
+--		clockCounter := clockCounter + 1;
+--	end if;
+--	
+--	if (clockCounter > 200) then
+--		
+--		if (SW1 = '1') then
+--			squareOnePosX1 := squareOnePosX1 + 5;
+--			squareOnePosX2 := squareOnePosX2 + 5;
+--		else
+--			squareOnePosX1 := squareOnePosX1 - 5;
+--			squareOnePosX2 := squareOnePosX2 - 5;
+--		end if;
+--		
+--		if (squareOnePosX2 > 1688) then
+--			squareOnePosX1 := 408;
+--			squareOnePosX2 := 608;
+--		elsif (squareOnePosX1 < 408) then
+--			squareOnePosX1 := 1388;
+--			squareOnePosX2 := 1588;
+--		end if;
+--		
+--		if (SW2 = '1') then
+--			squareTwoPosX1 := squareTwoPosX1 + 5;
+--			squareTwoPosX2 := squareTwoPosX2 + 5;
+--		else
+--			squareTwoPosX1 := squareTwoPosX1 - 5;
+--			squareTwoPosX2 := squareTwoPosX2 - 5;
+--		end if;
+--		
+--		
+--		if (squareTwoPosX2 > 1688) then
+--			squareTwoPosX1 := 408;
+--			squareTwoPosX2 := 608;
+--		elsif (squareTwoPosX1 < 408) then
+--			squareTwoPosX1 := 1388;
+--			squareTwoPosX2 := 1588;
+--		end if;
+--		
+--		ballPosX1 := ballPosX1 + ballVelocityX;
+--		ballPosX2 := ballPosX2 + ballVelocityX;
+--
+--		ballPosY1 := ballPosY1 + ballVelocityY;
+--		ballPosY2 := ballPosY2 + ballVelocityY;
+--		
+--		clockCounter := 0;
+--		
+--	end if;
+	
+	
+
+		
+
+ END IF;
+ END PROCESS;
+ END MAIN;

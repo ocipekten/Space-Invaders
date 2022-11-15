@@ -1,0 +1,32 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "C:\Users\Lab 402\Desktop\OMLab2\PLL.qsys" --block-symbol-file --output-directory="C:\Users\Lab 402\Desktop\OMLab2\PLL" --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading OMLab2/PLL.qsys
+Progress: Reading input file
+Progress: Adding pll_0 [altera_pll 16.1]
+Progress: Parameterizing module pll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: PLL.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: PLL.pll_0: Able to implement PLL with user settings
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "C:\Users\Lab 402\Desktop\OMLab2\PLL.qsys" --synthesis=VHDL --output-directory="C:\Users\Lab 402\Desktop\OMLab2\PLL\synthesis" --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading OMLab2/PLL.qsys
+Progress: Reading input file
+Progress: Adding pll_0 [altera_pll 16.1]
+Progress: Parameterizing module pll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: PLL.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: PLL.pll_0: Able to implement PLL with user settings
+Info: PLL: Generating PLL "PLL" for QUARTUS_SYNTH
+Info: pll_0: "PLL" instantiated altera_pll "pll_0"
+Info: PLL: Done "PLL" with 2 modules, 3 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

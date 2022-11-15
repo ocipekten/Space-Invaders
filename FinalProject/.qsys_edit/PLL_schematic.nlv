@@ -1,0 +1,9 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst PLL.pll_0 -pg 1 -lvl 1 -y 30
+preplace inst PLL -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>PLL</net_container>(SLAVE)PLL.reset,(SLAVE)pll_0.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>PLL</net_container>(SLAVE)PLL.pllreferenceclock,(SLAVE)pll_0.refclk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>PLL</net_container>(MASTER)PLL.pllclockout,(MASTER)pll_0.outclk0) 1 1 1 N
+levelinfo -pg 1 0 120 390
+levelinfo -hier PLL 130 160 290

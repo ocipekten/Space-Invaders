@@ -1,0 +1,7 @@
+
+State Machine - |VGA|SYNC:C1|enemyState
+Name enemyState.go_downr enemyState.go_downl enemyState.go_right enemyState.go_left 
+enemyState.go_left 0 0 0 0 
+enemyState.go_right 0 0 1 1 
+enemyState.go_downl 0 1 0 1 
+enemyState.go_downr 1 0 0 1 
